@@ -1,27 +1,26 @@
 name: CI - Run Tests
 
-# Define cuándo se ejecuta la acción
 on:
-  push:   # Ejecutar cuando haces push al repositorio
+  push:
     branches:
-      - main  # La rama principal de tu repositorio (cámbiala si usas otra)
-  pull_request:  # Ejecutar cuando se crea un pull request
+      - main
+  pull_request:
     branches:
       - main
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Define el sistema operativo donde correrán los tests
+    runs-on: ubuntu-latest
 
     steps:
       # 1. Chequea el código desde el repositorio
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3  # Actualiza a la versión v3
 
       # 2. Configura Node.js
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Actualiza a la versión v3
         with:
-          node-version: '16'  # Asegúrate de poner la versión que estás usando
+          node-version: '20'  # Cambia a la versión 20
 
       # 3. Instala las dependencias
       - run: npm install
