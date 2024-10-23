@@ -15,7 +15,7 @@ This project is a Pokémon Pokedex-like app built with **Vue 3**, **TypeScript**
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/GustavoMartinezFS/pokedex
    cd pokedex
    ```
 
@@ -90,3 +90,7 @@ The project includes unit tests powered by **Vitest**:
 - The design includes a **fixed BottomBar** with buttons to navigate and interact with the Pokémon list.
 - **Responsive modals** are used to display detailed Pokémon information over a grassy background.
 - Key components are reusable, such as the **BtnAtom** for buttons and **LogoAtom** for the app's logo.
+
+## Deploy
+
+[Link to vercel deploy](https://gm-poke.vercel.app/)
