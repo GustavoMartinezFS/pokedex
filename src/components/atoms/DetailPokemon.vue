@@ -1,7 +1,7 @@
 <template>
   <div class="detail-container">
-    <span class="attribute-title">{{ $capitalize(attribute) }}: </span>
-    <span class="detail-pokemon">{{ $capitalizeWords(detail) }}</span>
+    <span class="attribute-title">{{ $capitalize(attribute ?? '') }}: </span>
+    <span class="detail-pokemon">{{ $capitalizeWords(detail ?? '') }}</span>
     <hr />
   </div>
 </template>

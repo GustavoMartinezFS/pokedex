@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Searchbar from '@/components/molecules/searchbar.vue';
+import Searchbar from '@/components/molecules/SearchBar.vue';
 
 describe('Searchbar.vue', () => {
   it('renders the search input with the correct placeholder', () => {

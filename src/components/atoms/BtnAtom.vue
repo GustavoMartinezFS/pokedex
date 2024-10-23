@@ -92,7 +92,7 @@ const props = defineProps({
   },
 });
 
-const iconMap = {
+const iconMap: Record<string, string> = {
   star: new URL('@/assets/star.svg', import.meta.url).href,
   list: new URL('@/assets/list.svg', import.meta.url).href,
 };

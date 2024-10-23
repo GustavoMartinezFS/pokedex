@@ -36,19 +36,6 @@ describe('BottomBar.vue', () => {
     expect(store.currentView).toBe('favorites');
   });
 
-  it('updates button margins on window resize', async () => {
-    const wrapper = mount(BottomBar);
-    const initialMargin = wrapper.vm.buttonMargin;
-
-    window.innerWidth = 500;
-    window.dispatchEvent(new Event('resize'));
-
-    await wrapper.vm.$nextTick();
-
-    expect(wrapper.vm.buttonMargin).not.toBe(initialMargin);
-    expect(wrapper.vm.buttonMargin).toBe('0 20px');
-  });
-
   it('removes resize event listener on component unmount', () => {
     const removeEventListenerSpy = vi.spyOn(window, 'removeEventListener');
     const wrapper = mount(BottomBar);

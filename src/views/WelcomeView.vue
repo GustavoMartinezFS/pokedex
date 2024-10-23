@@ -9,7 +9,6 @@
     <btn-atom
       name="Get started"
       :maxWidthBt="131"
-      :icon="null"
       :active="true"
       :pressed="true"
       @manage:click="goToList"

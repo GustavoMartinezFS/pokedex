@@ -31,8 +31,8 @@
 
     <pokemon-modal
       v-if="showModal"
-      :name="selectedPokemon.name"
-      :isFavorite="selectedPokemon.isFavorite"
+      :name="selectedPokemon?.name"
+      :isFavorite="selectedPokemon?.isFavorite"
       @close-modal="closeModal"
       @update:isFavorite="addToFavorites(selectedPokemon)"
     />
@@ -64,7 +64,7 @@ const homeList = ref<HTMLElement | null>(null);
 const router = useRouter();
 
 const showModal = ref(false);
-const selectedPokemon = ref<{name: string; isFavorite: boolean }>(null);
+const selectedPokemon = ref<{name: string; isFavorite: boolean } | null>(null);
 
 let lastScrollTop = 0;
 
@@ -74,8 +74,10 @@ onMounted(async () => {
   }
 });
 
-const addToFavorites = (pokemon: {name: string; isFavorite: boolean }) => {
-  store.addToFavorites(pokemon);
+const addToFavorites = (pokemon: {name: string; isFavorite: boolean } | null) => {
+  if (pokemon) {
+    store.addToFavorites(pokemon);
+  }
 };
 
 const updateSearchQuery = (query: string) => {

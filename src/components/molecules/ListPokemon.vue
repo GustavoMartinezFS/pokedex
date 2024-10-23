@@ -1,6 +1,6 @@
 <template>
   <div class="list-item" @click="togglePokemonDetails">
-    <span>{{ $capitalize(pokemonName) }}</span>
+    <span>{{ $capitalize(pokemonName ?? '') }}</span>
 
     <span class="fav-atom" @click.stop>
       <fav-atom

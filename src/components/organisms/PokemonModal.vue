@@ -62,15 +62,17 @@ const store = usePokemonStore();
 const emit = defineEmits(['close-modal','update:isFavorite']);
 
 onMounted(async () => {
-  const details = await store.fetchPokemonDetails(props.name);
-  pokemonImage.value = details.image;
+  const details = await store.fetchPokemonDetails(props.name ?? '');
+  if (details) {
+    pokemonImage.value = details.image;
 
-  pokemonDetailsDisplay.value = {
-    name: details.name,
-    weight: (details.weight).toString(),
-    height: (details.height).toString(),
-    types: details.types,
-  };
+    pokemonDetailsDisplay.value = {
+      name: details.name,
+      weight: (details.weight).toString(),
+      height: (details.height).toString(),
+      types: details.types,
+    };
+  }
 });
 
 const closeModal = () => {

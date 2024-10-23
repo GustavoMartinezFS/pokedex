@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import BtnAtom from '@/components/atoms/btnAtom.vue';
+import BtnAtom from '@/components/atoms/BtnAtom.vue';
 
 describe('BtnAtom.vue', () => {
   it('renders the button with the correct text', () => {
@@ -59,7 +59,7 @@ describe('BtnAtom.vue', () => {
 
   it('does not render icon if "icon" prop is null', () => {
     const wrapper = mount(BtnAtom, {
-      props: { name: 'Click me', icon: null },
+      props: { name: 'Click me', icon: undefined },
     });
     expect(wrapper.find('img').exists()).toBe(false);
   });

@@ -33,7 +33,7 @@ import BtnAtom from "@/components/atoms/BtnAtom.vue";
 
 const store = usePokemonStore();
 const { currentView } = storeToRefs(store);
-const buttonMargin = ref("0");
+const buttonMargin = ref<string>("0");
 
 onMounted(() => {
   updateMargin();
