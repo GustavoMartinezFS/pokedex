@@ -14,19 +14,22 @@ jobs:
 
     steps:
       # 1. Chequea el código desde el repositorio
-      - uses: actions/checkout@v3  # Actualiza a la versión v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      # 2. Configura Node.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3  # Actualiza a la versión v3
+      # 2. Configura Node.js con la versión 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Cambia a la versión 20
+          node-version: '20'  # Especifica la versión de Node.js que deseas usar
+          cache: 'npm'  # Opcional: Cache para npm
 
       # 3. Instala las dependencias
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
 
       # 4. Ejecuta las pruebas con cobertura
       - name: Run tests with coverage
         run: npm run test:coverage
         env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}  # Usa el token de Coveralls
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
