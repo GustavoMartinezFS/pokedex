@@ -1,0 +1,3 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FavAtom.vue > matches snapshot 1`] = `"<div data-v-bd0df360="" class="fav-button"><i data-v-bd0df360=""><img data-v-bd0df360="" src="/src/assets/star-gold.svg" alt="star-gold"></i></div>"`;

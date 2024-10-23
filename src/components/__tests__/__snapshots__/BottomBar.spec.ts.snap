@@ -1,0 +1,7 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`BottomBar.vue > matches snapshot 1`] = `
+"<div data-v-448252c2="" class="bottom-bar"><button data-v-94a85ee2="" data-v-448252c2="" class="btn btn--with-icon btn--#F22539" style="width: 100%; max-width: 275px; min-width: 150px; height: 44px; padding: 10px; margin: 0px; background-color: rgb(242, 37, 57);"><span data-v-94a85ee2="" class="icon"><img data-v-94a85ee2="" src="http://localhost:3000/src/assets/list.svg" alt="icon"></span><span data-v-94a85ee2="" class="text">All</span></button>
+  <div data-v-448252c2="" class="spacer"></div><button data-v-94a85ee2="" data-v-448252c2="" class="btn btn--with-icon btn--#F22539" style="width: 100%; max-width: 275px; min-width: 150px; height: 44px; padding: 10px; margin: 0px; background-color: rgb(191, 191, 191);"><span data-v-94a85ee2="" class="icon"><img data-v-94a85ee2="" src="http://localhost:3000/src/assets/star.svg" alt="icon"></span><span data-v-94a85ee2="" class="text">Favorites</span></button>
+</div>"
+`;

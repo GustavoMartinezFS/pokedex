@@ -1,0 +1,10 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`EmptyList.vue > matches snapshot 1`] = `
+"<div data-v-8934a6a3="" class="empty-list">
+  <h1 data-v-8934a6a3="">Uh-oh!</h1>
+  <p data-v-8934a6a3="">You look lost on your journey!</p><button data-v-94a85ee2="" data-v-8934a6a3="" class="btn btn--no-icon btn--#F22539" style="max-width: 275px; min-width: 131px; height: 44px; padding: 10px; margin: 0px; background-color: rgb(242, 37, 57);">
+    <!--v-if--><span data-v-94a85ee2="" class="text">Go back home</span>
+  </button>
+</div>"
+`;
